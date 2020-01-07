@@ -22,7 +22,7 @@
                 <tr>
                     <td><?= $this->Number->format($produto->id) ?></td>
                     <td><?= h($produto->nome) ?></td>
-                    <td><?= $produto->has('tipo') ? $this->Html->link($produto->tipo->id, ['controller' => 'Tipos', 'action' => 'view', $produto->tipo->id]) : '' ?></td>
+                    <td><?= $produto->has('tipo') ? $this->Html->link($produto->tipo->tipo, ['controller' => 'Tipos', 'action' => 'view', $produto->tipo->id]) : '' ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $produto->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $produto->id]) ?>
